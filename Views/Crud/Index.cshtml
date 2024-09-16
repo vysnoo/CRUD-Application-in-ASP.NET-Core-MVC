@@ -1,5 +1,14 @@
 ﻿@model IEnumerable<Name>
-
+<div class="container m-2">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">Name List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Crud" asp-action="Create" class="btn btn-primary"><i class="bi bi-pencil-square"></i>&nbsp;Add Name</a>
+        </div>
+    </div>
+</div>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
