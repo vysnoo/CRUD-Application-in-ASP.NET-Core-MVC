@@ -5,15 +5,16 @@
             <h2 class="text-primary">Name List</h2>
         </div>
         <div class="col-6 text-end">
-            <a asp-controller="Crud" asp-action="Create" class="btn btn-primary"><i class="bi bi-pencil-square"></i>&nbsp;Add Name</a>
+            <a asp-controller="Crud" asp-action="Create" class="btn btn-success"><i class="bi bi-pencil-square"></i>&nbsp;Add Name</a>
         </div>
     </div>
 </div>
-<table class="table table-bordered table-striped ">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,10 @@
             <tr>
                 <td>@obj.FirstName</td>
                 <td>@obj.LastName</td>
+                <td class="d-flex">
+                    <a asp-contrller="Crud" asp-action="Update" asp-route-id="@obj.Id" class="btn btn-dark w-50 me-2"><i class="bi bi-pencil">&nbsp;</i>Edit</a>
+                    <a asp-contrller="Crud" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger w-50"><i class="bi bi-trash">&nbsp;</i>Delete</a>
+                </td>
             </tr>
         }
     </tbody>

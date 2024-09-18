@@ -1,0 +1,25 @@
+﻿@model Name
+
+<form asp-action="Update" method="post">
+    <h2> Edit Name</h2>
+    <hr>
+    <div class="mb-3">
+        <label asp-for="FirstName"> First Name</label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName"> Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Update</button>
+    <a asp-controller="Crud" asp-action="Index" class="btn btn-outline-secondary">Back to Home</a>
+</form>
+
+@section scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
