@@ -37,6 +37,7 @@ namespace CRUD_Application.Controllers
             {
                 _db.Names.Add(obj);
                 _db.SaveChanges();
+                TempData["Success"] = "Name Added Successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -74,6 +75,7 @@ namespace CRUD_Application.Controllers
             {
                 _db.Names.Update(obj);
                 _db.SaveChanges();
+                TempData["Success"] = "Name Updated Successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -110,6 +112,7 @@ namespace CRUD_Application.Controllers
 
                 _db.Names.Remove(objList);
                 _db.SaveChanges();
+                TempData["Success"] = "Name Deleted Successfully";
                 return RedirectToAction("Index");   
          
         }
